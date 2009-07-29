@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 //EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<script type="text/javascript" src="js/ticker.js"></script>
+<style type="text/css">
+.ticker {
+width: 305px;
+height: 15px;
+padding: 0px;
+position: absolute; 
+top: 22px;
+color:#fff;
+font-weight:bold;
+font-family: Helvetica;
+font-size: 10px;
+/* background-color: black; */
+}
+</style>
+</head>
+
+<body onload="fetchRSS('http://rss.asahi.com/f/asahi_newsheadlines', 'ticker', 10);">
+<div id="ticker" class="ticker"></div>
+
+</body>
+</html>
