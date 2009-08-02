@@ -3,19 +3,20 @@
 
 // Your country code
 // If it's not in the strings/ folder, please translate strings/en.js and send to gruppler@gmail.com
-var language = "en";
+var language = "ja";
 // NOTE: to change time formats, look in strings/en.js (or whatever language file you're using)
 
 // Arrange and/or disable (by commenting-out) sections:
 // To enable a section, remove the "//" at the beginning of the line
 var sections = [
-//	"Clock",
+	"Clock",
 	"Weather",
 	"Mail",
-	"Calendar",
 	"Calls",
-	"Voicemail",
+//	"Voicemail",
 	"SMS",
+	"Twitter",
+	"Calendar",
 ];
 
 // If "Clock" is enabled in the "sections" list above, this shows the bigger custom clock
@@ -38,11 +39,11 @@ var startDay = 0;
 var defaultCollapsed = {
 	"Clock":true,
 	"Mail":true,
-//	"Calendar":true,
+	"Calendar":true,
 	"Calls":true,
 	"Voicemail":true,
 	"SMS":true,
-//	"Weather":true,
+	"Weather":true,
 };
 
 // Enable global collapse/expand by swiping right (or left, if globalHide is false)?
@@ -72,7 +73,7 @@ var expandFirst = true;
 var revertCollapsedOnEmpty = true;
 
 // Hide empty sections?
-var hideEmptySections = true;
+var hideEmptySections = true; 
 
 /*––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
 // SECTION DISPLAY SETTINGS
@@ -95,13 +96,13 @@ var separateCalendarDays = true;
 var separateCalendarTimes = true;
 
 // Sort this calendar first if separateCalendars is true
-var mainCalendar = "Calendar";
+var mainCalendar = "予定表";
 
 // Show count for only today' events?
 var calendarCountToday = false;
 
 // Limit the number of events to show
-var calendarLimit = 10;
+var calendarLimit = 3;
 
 // Display each email account as a separate subsection?
 // Note: If true, there will be an extra subheader, even if there's only one email account.
@@ -166,8 +167,8 @@ var roundPeriods = [
 // Ex. "OCN|AU|VIC|MELBOURNE", "ASI|PH|MAKATI" e.g. 'Defiance, Ohio'|'Moscow, Russia'|'London, UK'
 // Visit http://accuweather.com to find something that works
 var locales = [
-	"43004",
-	"43201",
+	"ASI|JP|JA019|YOKOHAMA",
+	//"ASI|JP|JA041|TOKYO",
 ];
 
 // Show the first city's current weather in the main header?
@@ -175,13 +176,13 @@ var locales = [
 var mainHeaderWeather = true;
 
 // Show the first city's name in the main header, or hide it?
-var displayMainCityName = false;
+var displayMainCityName = true;
 
 // Show the other cities' names in their subheaders, or hide them?
 var displayCityNames = true;
 
 // Limit the number of days to display (also limited by the weather source; 7 seems to be the max)
-var weatherDayLimit = 7;
+var weatherDayLimit = 5;
 
 // Set to 'false' if you'd prefer Farenheit
 var isCelsius = true;
@@ -191,7 +192,7 @@ var useRealFeel = false;
 
 // What should separate hi temperatures from low temperatures?
 // use "<br>" to put them on separate lines, or something else like "|", for example.
-var weatherTempSeparator = "<br>";
+var weatherTempSeparator = " ";
 
 // Images must follow the same naming schema as the 'klear' set (borrowed from KWeather)
 var iconSet = "tick"; //'klear'|'tick'
@@ -201,8 +202,8 @@ var iconExt = ".png"; //'.png'|'.gif'|etc.
 var displayWeatherRefreshButton = true;
 
 // To disable automatic refresh/retry, set to 0
-var weatherUpdateInterval = 15;	//Minutes
-var weatherRetryInterval = 0.5;	//Minutes
+var weatherUpdateInterval = 10; //Minutes
+var weatherRetryInterval = 0.5; //Minutes
 
 // If stop trying after this many consecutive failed attempts (set to 0 for infinite retries):
 var weatherRetriesMax = 3;
@@ -210,6 +211,32 @@ var weatherRetriesMax = 3;
 // The (currently broken) 'Yahoo' which for the 'locale' requires a US zip or location code
 // (e.g. UKXX0085 or CHXX0008) from http://weather.yahoo.com
 var weatherSource = "Apple"; // "Yahoo" is broken for now, so use "Apple"
+
+/*????????????????????????????????????????????????????????????????????????????????????????????????*/
+// Twitter SETTINGS
+var twitter_enabled = true;
+var displayTwitterRefreshButton = true;
+var twitter_username = "";
+var twitter_password = "";
+
+var twitterInterval = 5;
+var twitterRetryInterval = 0.25; //Minutes
+var twitterRetriesMax = 5;
+
+// Twitter Timeline
+var twitter_tl_limit = 5; // items be shown
+var twitter_tl_since = 180; // mins ago
+var twitter_tl_nb = 15; // Number of Items to fetch
+
+// Mentions
+var twitter_ment_limit = 5;
+var twitter_ment_since = 60 * 24 * 1;
+var twitter_ment_nb = 15;
+
+// direct message
+var twitter_dm_limit = 5;
+var twitter_dm_since = 60*24*1;
+var twitter_dm_nb = 15;
 
 /*––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
 // SWIPE SETTINGS

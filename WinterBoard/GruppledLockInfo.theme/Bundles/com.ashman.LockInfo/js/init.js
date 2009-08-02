@@ -2,7 +2,7 @@ var collapsed = {};
 var lastCollapsed = {};
 var lockinfoDIV = document.getElementById("lockinfo");
 var clockDIV;
-var monthDIV
+var monthDIV;
 var weatherDIV;
 var mailDIV;
 var calendarDIV;
@@ -12,6 +12,10 @@ var smsDIV;
 var clockTimer;
 var dayTimer;
 
+var twitterDIV;
+var twFriendDIV;
+var twMentionsDIV;
+var twDirectDIV;
 
 for(var id in defaultCollapsed){
 	collapsed[id] = defaultCollapsed[id];
@@ -46,6 +50,82 @@ window.onload = function(){
 					clockDIV.appendChild(container);
 					lockinfoDIV.appendChild(clockDIV);
 					updateClock();
+				break;
+			case "Twitter":
+				var refresh = "<span id='twitter_timestamp'" + (displayTwitterRefreshButton ? " class='refresh'" : "")+ " ontouchstart='event.stopPropagation();' onclick='twitterRetries=0;twitterRefresherTemp();'></span>";
+				twitterDIV = document.createElement("DIV");
+				twitterDIV.id = "Twitter";
+				twitterDIV.className = "empty container";
+				twitterDIV.style.display = hideEmptySections ? "none" : "block";
+
+				// header
+				var html = "<div class='header twitter expanded' ontouchstart='catchSwipe(event, toggleSection, [this.parentNode]);'>" +
+				"<div class='arrow'></div>" + refresh + "<img src='images/t.png'/> " + string_twitter + " - <img src='images/sms.png'/><span id='twFriendCount_h'>0</span> <img src='images/at.png'/><span id='twMentionsCount_h'>0</span> <img src='images/mailh.png'/><span id='h_d_c'>0</span>" + "</div><div class='container'></div>";
+				twitterDIV.innerHTML = html ;
+var addcont = document.createDocumentFragment();
+
+				// timeline sub header
+				twFriendDIV = document.createElement("DIV");
+				twFriendDIV.className = "container";
+				twFriendDIV.id = "twFriend";
+				twFriendDIV.counterid = "twFriendCount";
+				twFriendDIV.since = twitter_tl_since;
+				twFriendDIV.lastid = -1;
+				twFriendDIV.contentsNode = "twFriend_content";
+				twFriendDIV.limit = twFriendDIV.defaultLimit = twitter_tl_limit;
+				twFriendDIV.update = updateTwitterDIV;
+				twFriendDIV.ontouchstart = function(event) { catchSwipe(event, toggleSection, [this]);};
+				twFriendDIV.style.display = "none"; // default
+				html =	"<div class='sub1 header expanded' ontouchstart='catchSwipe(event, toggleSection, [this.parentNode]);'><div class='arrow'></div>" + string_twitter_timeline + "(<span id='twFriendCount'>0</span>)</div><div id='twFriend_content' class='container timeline'></div></div>";
+				twFriendDIV.innerHTML = html;
+				addcont.appendChild(twFriendDIV);
+				if(collapsed[twFriendDIV.id]) {
+					collapsed[twFriendDIV.id] = false;
+					toggleSection([twFriendDIV.id, true]);
+				}
+
+				// mentions sub header
+				twMentionsDIV = document.createElement("DIV");
+				twMentionsDIV.className = "container";
+				twMentionsDIV.id = "twMentions";
+				twMentionsDIV.counterid = "twMentionsCount";
+				twMentionsDIV.since = twitter_ment_since;
+				twMentionsDIV.lastid = -1;
+				twMentionsDIV.contentsNode = "twMentions_content";
+				twMentionsDIV.limit = twMentionsDIV.defaultLimit = twitter_ment_limit;
+				twMentionsDIV.update = updateTwitterDIV;
+				twMentionsDIV.ontouchstart = function(event) { catchSwipe(event, toggleSection, [this]);};
+				twMentionsDIV.style.display = "none"; // default
+				html =	"<div class='sub1 header expanded' ontouchstart='catchSwipe(event, toggleSection, [this.parentNode]);'><div class='arrow'></div>" + string_twitter_mentions + "(<span id='twMentionsCount'>0</span>)</div><div id='twMentions_content' class='container mentions'></div></div>";
+				twMentionsDIV.innerHTML = html;
+				addcont.appendChild(twMentionsDIV);
+
+				// direct message
+				twDirectDIV = document.createElement("DIV");
+				twDirectDIV.className = "container";
+				twDirectDIV.id = "twDirect";
+				twDirectDIV.counterid = "twDirectCount";
+				twDirectDIV.since = twitter_dm_since;
+				twDirectDIV.lastid = -1;
+				twDirectDIV.contentsNode = "twDirect_content";
+				twDirectDIV.update = updateTwitterDIV;
+				twDirectDIV.ontouchstart = function(event) { catchSwipe(event, toggleSection, [this]);};
+				twDirectDIV.style.display = "none"; // default
+
+				html =  "<div class='sub1 header expanded' ontouchstart='catchSwipe(event, toggleSection, [this.parentNode]);'><div class='arrow'></div>" + string_twitter_direct + "(<span id='twDirectCount'>0</span>)</div><div id='twDirect_content' class='container direct'></div></div>";
+				twDirectDIV.innerHTML = html;
+				addcont.appendChild(twDirectDIV);
+
+				twitterDIV.lastChild.appendChild(addcont);
+				if(collapsed[twMentionsDIV.id]) {
+					collapsed[twMentionsDIV.id] = false;
+					toggleSection([twMentionsDIV.id, true]);
+				}
+				lockinfoDIV.appendChild(twitterDIV);
+				if(collapsed["Twitter"]){
+					collapsed["Twitter"] = false;
+					toggleSection([twitterDIV, true]);
+				}
 				break;
 				case "Weather":
 					weatherDIV = document.createElement("DIV");
@@ -136,6 +216,7 @@ window.onload = function(){
 		}
 	}, 50);
 	setTimeout(updateWeather, 100);
+	setTimeout(updateTwitter, 100);
 }
 
 if(!displayArrows){

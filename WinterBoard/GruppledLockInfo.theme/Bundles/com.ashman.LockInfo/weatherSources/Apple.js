@@ -110,7 +110,7 @@ function fetchWeatherData(callback, zip, id){
 	var xml_request = new XMLHttpRequest();
 	xml_request.onload = function(e){xml_loaded(e, xml_request, callback, id);}
 	xml_request.overrideMimeType("text/xml");
-	xml_request.open("GET", url+zip);
+	xml_request.open("GET", url+zip, true);
 	xml_request.setRequestHeader("Cache-Control", "no-cache");
 	xml_request.setRequestHeader("wx", "385");
 	xml_request.send(null);
@@ -299,7 +299,7 @@ function validateWeatherLocation(location, callback, id){
 	var xml_request = new XMLHttpRequest();
 	xml_request.onload = function(e){xml_validateloaded(e, xml_request, callback, id);}
 	xml_request.overrideMimeType("text/xml");
-	xml_request.open("GET", url+location);
+	xml_request.open("GET", url+location, true);
 	xml_request.setRequestHeader("Cache-Control", "no-cache");
 	xml_request.send(null);
 }

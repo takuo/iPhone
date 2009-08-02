@@ -91,7 +91,7 @@ function dealWithWeather(obj){
 	if(!obj.error){
 		weatherRetries = 0;
 		lastWeatherUpdate = new Date();
-		var city = obj.city+': ';
+		var city = (string_city_names[obj.city] ? string_city_names[obj.city] : obj.city ) +': ';
 		var desc = " &ndash; "+weatherText[obj.icon];
 		if(useRealFeel){
 			tempValue = convertTemp(obj.realFeel);

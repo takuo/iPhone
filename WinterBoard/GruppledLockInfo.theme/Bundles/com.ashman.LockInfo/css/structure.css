@@ -1,6 +1,13 @@
 body {
 margin:0;
 padding:0;
+height:768px;
+ background-image: url(../images/LockBackground.png);
+background-color: #a0522d;
+/*background-position: 10px 85px;*/
+/* background-color: white;
+background-image: url(../images/LockBackground.gif);
+background-repeat: no-repeat; */
 }
 
 div#background {
@@ -47,10 +54,10 @@ margin-right:3px;
 height:18px;
 line-height:18px;
 font-size:12px;
-color:white;
+color:LightBlue;
 padding-top:2px;
 font-weight:bold;
-text-align:center;
+text-align:left;
 background-image:url(../images/bar.png);
 background-repeat:no-repeat;
 clear:both;
@@ -63,6 +70,7 @@ text-align:left;
 padding-left:5px;
 padding-right:15px;
 background-image:url(../images/bar2.png);
+color: Orange;
 }
 
 .header.sub2 {
@@ -108,7 +116,7 @@ height:17px;
 }
 
 div.sub {
-padding:1px 27px;
+padding:1px 15px 1px 27px;
 border-bottom:1px solid rgba(50, 50, 50, 0.35);
 background-color:rgba(0, 0, 0, 0.25);
 min-height:18px;
@@ -192,6 +200,22 @@ text-align:center;
 padding:0;
 margin:0;
 float:none;
+}
+
+.twitter #twitter_timestamp {
+float:right;
+padding-right:8px;
+}
+
+.header.twitter #twitter_timestamp.refresh {
+padding:0 20px 0 0 !important;
+}
+
+#twitter_timestamp.refresh {
+padding:2px 20px 2px 0 !important;
+background-image:url(../images/refresh.png);
+background-position:right center;
+min-height:18px;
 }
 
 .capitalize{

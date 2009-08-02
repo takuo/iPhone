@@ -408,13 +408,16 @@ function updateCalendar(calendar){
 				day++;
 				alt = '';
 				var d = start.format("Y-n-j");
-				html += "<div id=\""+dayID+"\" ontouchstart='catchSwipe(event, toggleSection, [this]);' class='container'><div class='sub"+(separateCalendars?2:1)+" header expanded'><div class='arrow'></div><span><b>"+start.format(format_date)+"</b> (<span class='capitalize'>"+start.relative(true)+"</span>) (<b>"+(separateCalendars ? eventCounts[currentCal].days[d] : eventCounts[d])+"</b>)</span></div><div class='container'><div class='container'>";
+                                var ymd = currentDate.getFullYear()+"/"+(currentDate.getMonth()+1)+"/"+currentDate.getDate();
+                                var holy = ktHolidayName(ymd);
+                                holy = (holy != "") ? " <span class='sun'>" + holy + "</span>" : "";
+				html += "<div id=\""+dayID+"\" ontouchstart='catchSwipe(event, toggleSection, [this]);' class='container'><div class='sub"+(separateCalendars?2:1)+" header expanded'><div class='arrow'></div><span><b>"+start.format(format_date)+"</b>" + holy + " (<span class='capitalize'>"+start.relative(true)+"</span>) (<b>"+(separateCalendars ? eventCounts[currentCal].days[d] : eventCounts[d])+"</b>)</span></div><div class='container'><div class='container'>";
 			}
 			var regexp = new RegExp("birthday|"+string_birthday, "i");
 			html += "<div class='sub"+alt+" cal_"+events[i].calendar.replace(id_regex, "_")+(events[i].summary.match(regexp) ? " birthday" : "")+(events[i].allDay ? " allDay" : "")+"'>";
 
 			var titleText = "<span class='sub1'>"+events[i].summary+"</span>";
-			var locationText = events[i].location ? "<span class='sub2'> @ "+events[i].location+"</span>" : "";
+			var locationText = events[i].location ? "<span class='sub2 loc'> @ "+events[i].location+"</span>" : "";
 			if(!events[i].allDay || events[i].start + 86400000 < events[i].end){
 				var format = separateCalendarDays && end.isSameDay(start) ? format_time : (events[i].allDay ? format_date_short : format_date_time_short);
 				var startText = start.format(format);
