@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<plist version="1.0">
+
+<dict>
+
+	<key>CalendarIconDateStyle</key>
+
+	<string>width:59px;height:59px;position:absolute;color: #fff;font-size: 27px;font-weight: bold;position:absolute;top:-0px;text-align:center;text-shadow: 0px 2px 1px black;</string>
+
+	<key>CalendarIconDayStyle</key>
+
+	<string>position:absolute;margin-top:31px;width:55px;color: #000;font-size: 8px;font-weight: bold;padding: 10px 0 0 ;border-top: 2px groove #555;text-align:center;border-top: 0px groove #555; color: black; text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.7);</string>
+
+	<key>DockedIconLabelStyle</key>
+
+	<string>color:#d5d5d5; text-shadow: #000000 0px -1px 0px</string>
+
+	<key>FontName-Helvetica</key>
+
+	<string>Helvetica</string>
+
+	<key>FontName-Lock Clock</key>
+
+	<string>Helvetica</string>
+
+	<key>FontName-Marker Felt</key>
+
+	<string>Marker Felt</string>
+
+	<key>UndockedIconLabelStyle</key>
+
+	<string>color:#d5d5d5; text-shadow: #000000 0px -1px 0px</string>
+
+	<key>BadgeStyle</key>
+
+	<string>color:#d5d5d5; margin-top:1px;</string>
+	<key>TimeStyle</key>
+
+	<string>margin-left: 0px; padding-top:1px; font-size: 12px;</string> 
+
+
+</dict>
+
+</plist>
+
