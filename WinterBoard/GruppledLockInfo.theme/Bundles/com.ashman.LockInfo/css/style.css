@@ -1,0 +1,228 @@
+/* General */
+div {
+font-family:Helvetica;
+}
+
+div.alt {
+background-color:rgba(50, 50, 50, 0.25);
+}
+
+.sub1, #Month {
+font-size:12px;
+font-weight:bold;
+color:rgba(255, 255, 255, 0.85);
+text-shadow:#000000 0px 1px 2px;
+}
+
+.sub2 {
+font-size:11px;
+font-weight:bold;
+color:rgba(200, 200, 200, 0.85);
+text-shadow:#000000 0px 1px 2px;
+}
+
+.relativeTime {
+font-size:10px;
+font-weight:normal;
+white-space:nowrap;
+}
+
+.loadMore {
+font-size:11px;
+line-height:18px;
+text-align:center;
+color:rgba(200, 200, 200, 0.85);
+background-image:url(../images/bar3s.png);
+}
+
+.loadMore:after {
+content:"...";
+}
+
+/* Clock */
+#Clock.big #time {
+font-size:28px;
+line-height:38px;
+}
+
+#Clock.big #date {
+font-size:13px;
+line-height:38px;
+}
+
+/* Monthly Calendar */
+#Month {
+width:90%;
+}
+
+#Month td {
+font-size:11px;
+}
+
+#Month .today, #Month th {
+background-color:rgba(150, 150, 150, 0.5);
+-webkit-border-radius:4px;
+-webkit-box-shadow:0px 1px 3px rgba(0, 0, 0, 0.25);
+text-shadow:rgba(0, 0, 0, 0.6) 0px -1px 1px !important;
+}
+
+.otherMonth {
+font-weight:normal;
+color:rgba(200, 200, 200, 0.65);
+}
+
+/* Weather */
+#weather_timestamp {
+font-size:10px;
+line-height:18px;
+}
+
+#weather_title {
+background-image:url(../images/weatherh.png);
+padding-left:20px;
+}
+
+#Weather .temp {
+font-weight:bold;
+}
+
+#Weather .city {
+text-transform:capitalize;
+padding-left:2px;
+}
+
+#Weather .desc {
+}
+
+#Weather .weatherIcon {
+width:18px;
+height:18px;
+}
+
+#Weather .forecast td {
+font-weight:bold;
+}
+
+#Weather .forecast img {
+width:30px;
+height:30px;
+}
+
+#Weather .forecast span {
+font-size:10px !important;
+}
+
+/* Calendar */
+#Calendar .sub1.header.cal span {
+background-image:url(../images/calendarh.png);
+padding-left:20px;
+}
+
+#Calendar .sub {
+background-image:url(../images/calendar.png);
+background-position:5px 0px;
+}
+
+#Calendar .time {
+font-size:11px;
+font-weight:normal;
+}
+
+#Calendar .sub.allDay {
+background-image:url(../images/paper.png);
+}
+
+#Calendar .sub.birthday {
+background-image:url(../images/birthday.png);
+}
+
+/* Example calendar-specific customization:
+
+#cal_My_Schedule .sub1.header span {
+color:yellow;
+}
+
+#Calendar .sub.cal_Your_Schedule {
+background-image:url(../images/your_schedule.png);
+}
+
+#Calendar .sub.cal_Your_Schedule span {
+color:white;
+}
+
+*/
+
+#cal_Holidays .sub1.header span {
+background-image:url(../images/star.png) !important;
+}
+
+#Calendar .sub.cal_Holidays {
+background-image:url(../images/star.png) !important;
+}
+
+#cal_Birthdays .sub1.header span {
+background-image:url(../images/birthday.png) !important;
+}
+
+#cal_Birthdays .sub {
+background-image:url(../images/birthday.png) !important;
+}
+
+
+/* Mail */
+#Mail .sub {
+background-image:url(../images/mail.png);
+background-position:5px 0px;
+}
+
+/* Example mail account-specific customization:
+
+#mail_your_main_account_gmail_com .sub1.header span {
+color:yellow;
+}
+
+#Mail .sub.mail_your_work_account_gmail_com {
+background-image:url(../images/workmail.png);
+}
+
+#Mail .sub.mail_your_work_account_gmail_com span {
+background-image:url(../images/workmail.png);
+}
+
+*/
+
+/* Voicemail */
+#Voicemail .sub {
+background-image:url(../images/voicemail.png);
+background-position:5px 0px;
+}
+
+/* Calls */
+#Calls .sub {
+background-image:url(../images/calls.png);
+background-position:5px 0px;
+}
+
+/* SMS */
+#SMS .sub1.header span {
+background-image:url(../images/person.png);
+padding-left:20px;
+}
+
+#SMS .sub {
+background-image:url(../images/sms.png);
+background-position:5px 0px;
+}
+
+/* Example SMS sender-specific customization:
+
+#SMS .sms_Your_Mom .sub1.header span {
+background-image:url(../images/mommy.png);
+}
+
+#SMS .sms_Your_Mom .sub {
+color:pink;
+}
+
+*/
+

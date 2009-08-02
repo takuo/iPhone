@@ -1,0 +1,200 @@
+body {
+margin:0;
+padding:0;
+}
+
+div#background {
+width:320px;
+min-height:480px;
+padding:0px;
+}
+
+.header img, .sub img {
+width:18px;
+height:18px;
+vertical-align:top;
+}
+
+.sub img {
+margin-left:-22px;
+padding-right:4px;
+vertical-align:middle;
+}
+
+.arrow {
+float:right;
+width:15px;
+height:15px;
+margin-right:5px;
+background-repeat:no-repeat;
+}
+
+.container.empty .arrow {
+visibility:hidden;
+}
+
+.header.sub1 .arrow {
+margin-right:-3px;
+-webkit-opacity:0.8;
+}
+
+.header.sub2 .arrow {
+margin-right:3px;
+-webkit-opacity:0.6;
+}
+
+.header {
+height:18px;
+line-height:18px;
+font-size:12px;
+color:white;
+padding-top:2px;
+font-weight:bold;
+text-align:center;
+background-image:url(../images/bar.png);
+background-repeat:no-repeat;
+clear:both;
+text-shadow: rgba(0, 0, 0, 0.75) 0px -1px 1px !important;
+}
+
+.header.sub1, .header.sub2 {
+font-weight:normal;
+text-align:left;
+padding-left:5px;
+padding-right:15px;
+background-image:url(../images/bar2.png);
+}
+
+.header.sub2 {
+background-image:url(../images/bar3.png);
+padding-left:15px;
+}
+
+.header.expanded .arrow {
+background-image:url(../images/arrow_e.png);
+}
+
+.header.collapsed .arrow {
+background-image:url(../images/arrow_c.png);
+}
+
+.header span, .sub {
+background-repeat:no-repeat;
+background-position:left center;
+}
+
+.container {
+color:white;
+overflow:hidden;
+}
+
+.header + div {
+background-image:url(../images/shadow.png);
+background-repeat:no-repeat;
+}
+
+.header + div div:first-child .header.sub1 {
+background-image:url(../images/bar2s.png);
+}
+
+.header.sub1 + div div div:first-child .header.sub2 {
+background-image:url(../images/bar3s.png);
+}
+
+#bottom {
+background-image:url(../images/shadow.png);
+background-repeat:no-repeat;
+height:17px;
+}
+
+div.sub {
+padding:1px 27px;
+border-bottom:1px solid rgba(50, 50, 50, 0.35);
+background-color:rgba(0, 0, 0, 0.25);
+min-height:18px;
+}
+
+#Clock #time {
+float:left;
+padding-left:10px;
+}
+
+#Clock #date {
+float:right;
+padding-right:10px;
+font-weight:normal;
+}
+
+#Clock.big .header {
+background-image:url(../images/bigbar.png);
+height:38px;
+}
+
+#Clock.big .arrow {
+margin-top:11px;
+}
+
+#Month {
+text-align:center;
+margin-top:5px;
+}
+
+#weather_timestamp {
+font-weight:normal;
+}
+
+#weather_timestamp.refresh {
+padding:2px 20px 2px 0 !important;
+background-image:url(../images/refresh.png);
+background-position:right center;
+min-height:18px;
+}
+
+.weather #weather_timestamp {
+float:right;
+padding-right:8px;
+}
+
+#Weather .header.weather {
+text-align:left;
+}
+
+#forecast_header.weather img {
+padding-left:5px;
+}
+
+.header.weather #weather_timestamp.refresh {
+padding:0 20px 0 0 !important;
+}
+
+#Weather .temp {
+margin-top: -3px;
+}
+
+#Weather .city {
+padding-left:2px;
+}
+
+#Weather .forecast {
+padding:0 15px;
+}
+
+#Weather .forecast table {
+width:100%;
+}
+
+#Weather .forecast td {
+vertical-align:top;
+text-align:center;
+}
+
+#Weather .forecast img {
+padding:0;
+margin:0;
+float:none;
+}
+
+.capitalize{
+text-transform:capitalize;
+}
+
