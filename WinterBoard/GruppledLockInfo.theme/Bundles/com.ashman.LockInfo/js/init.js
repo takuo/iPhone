@@ -60,7 +60,7 @@ window.onload = function(){
 
 				// header
 				var html = "<div class='header twitter expanded' ontouchstart='catchSwipe(event, toggleSection, [this.parentNode]);'>" +
-				"<div class='arrow'></div>" + refresh + "<img src='images/t.png'/> " + string_twitter + " - <img src='images/sms.png'/><span id='twFriendCount_h'>0</span> <img src='images/at.png'/><span id='twMentionsCount_h'>0</span> <img src='images/mailh.png'/><span id='h_d_c'>0</span>" + "</div><div class='container'></div>";
+				"<div class='arrow'></div>" + refresh + "<img src='images/t.png'/> " + string_twitter + " - <img src='images/sms.png'/><span id='twFriendCount_h'>0</span> <img src='images/at.png'/><span id='twMentionsCount_h'>0</span> <img src='images/mailh.png'/><span id='twDirectCount_h'>0</span>" + "</div><div class='container'></div>";
 				twitterDIV.innerHTML = html ;
 var addcont = document.createDocumentFragment();
 
@@ -108,6 +108,7 @@ var addcont = document.createDocumentFragment();
 				twDirectDIV.since = twitter_dm_since;
 				twDirectDIV.lastid = -1;
 				twDirectDIV.contentsNode = "twDirect_content";
+				twDirectDIV.limit = twDirectDIV.defaultLimit = twitter_dm_limit;
 				twDirectDIV.update = updateTwitterDIV;
 				twDirectDIV.ontouchstart = function(event) { catchSwipe(event, toggleSection, [this]);};
 				twDirectDIV.style.display = "none"; // default
@@ -120,6 +121,10 @@ var addcont = document.createDocumentFragment();
 				if(collapsed[twMentionsDIV.id]) {
 					collapsed[twMentionsDIV.id] = false;
 					toggleSection([twMentionsDIV.id, true]);
+				}
+				if(collapsed[twDirectDIV.id]) {
+					collapsed[twDirectDIV.id] = false;
+					toggleSection([twDirectDIV.id, true]);
 				}
 				lockinfoDIV.appendChild(twitterDIV);
 				if(collapsed["Twitter"]){

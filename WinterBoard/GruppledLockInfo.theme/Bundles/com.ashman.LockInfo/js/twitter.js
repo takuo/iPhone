@@ -76,9 +76,10 @@ function updateTwitterDIV(div, twit)
 
 		for(var i=0; i<twit.length && i < div.limit; i++) {
 			var date = new Date(twit[i].created_at);
+			var screen_name = twit[i]['sender_screen_name'] ?  twit[i]['sender_screen_name'] : twit[i].user.screen_name;
 			html += "<div  class='sub"+ (i % 2 ? " alt" : "") + "'>";
 			html += "<span class='sub1 tweet'>" + twit[i].text +"</span>";
-			html += "<div style='text-align:right;' class='sub2 twinfo'><span class='sub2 who'>" + twit[i].user.screen_name +" &ndash; "  + date.format(date.isSameDay() ? format_time : format_date_time_short) + "</span>";
+			html += "<div style='text-align:right;' class='sub2 twinfo'><span class='sub2 who'>" + screen_name +" &ndash; "  + date.format(date.isSameDay() ? format_time : format_date_time_short) + "</span>";
 			if(displayRelativeTimes){
 				var key = div.id + "_time_" + twit[i].id;
 				html += " (<span id='" + key +"'> </span>)";
