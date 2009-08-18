@@ -1,6 +1,7 @@
 var twitterTimestamp;
 
 function updateTwitter(){
+	if (!twitterDIV) return;
 	window.clearTimeout(document.getElementById("twitter_timestamp").timer);
 	document.getElementById("twitter_timestamp").innerHTML = "...";
 	twitterRefresherTemp();
