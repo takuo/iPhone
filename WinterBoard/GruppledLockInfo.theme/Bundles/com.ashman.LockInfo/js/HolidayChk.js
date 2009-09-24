@@ -4,35 +4,35 @@
 //_/ CopyRight(C) K.Tsunoda(AddinBox) 2001 All Rights Reserved.
 //_/ ( http://www.h3.dion.ne.jp/~sakatsu/index.htm )
 //_/
-//_/   ‚±‚Ìj“ú”»’èƒR[ƒh‚ÍwExcel:ktŠÖ”ƒAƒhƒCƒ“x‚Åg—p‚µ‚Ä‚¢‚é
-//_/   ‚u‚a‚`ƒ}ƒNƒ‚ğ[JavaScript]‚ÉˆÚA‚µ‚½‚à‚Ì‚Å‚·B
-//_/   ‚±‚ÌŠÖ”‚Å‚ÍA‚Q‚O‚O‚V”N{s‚Ì‰ü³j“ú–@(º˜a‚Ì“ú)‚Ü‚Å‚ğ
-//_/ @ƒTƒ|[ƒg‚µ‚Ä‚¢‚Ü‚·(‚XŒ‚Ì‘–¯‚Ì‹x“ú‚ğŠÜ‚Ş)B
+//_/   ã“ã®ç¥æ—¥åˆ¤å®šã‚³ãƒ¼ãƒ‰ã¯ã€Excel:kté–¢æ•°ã‚¢ãƒ‰ã‚¤ãƒ³ã€ã§ä½¿ç”¨ã—ã¦ã„ã‚‹
+//_/   ï¼¶ï¼¢ï¼¡ãƒã‚¯ãƒ­ã‚’[JavaScript]ã«ç§»æ¤ã—ãŸã‚‚ã®ã§ã™ã€‚
+//_/   ã“ã®é–¢æ•°ã§ã¯ã€ï¼’ï¼ï¼ï¼—å¹´æ–½è¡Œã®æ”¹æ­£ç¥æ—¥æ³•(æ˜­å’Œã®æ—¥)ã¾ã§ã‚’
+//_/ ã€€ã‚µãƒãƒ¼ãƒˆã—ã¦ã„ã¾ã™(ï¼™æœˆã®å›½æ°‘ã®ä¼‘æ—¥ã‚’å«ã‚€)ã€‚
 //_/
-//_/ (*1)‚±‚ÌƒR[ƒh‚ğˆø—p‚·‚é‚É“–‚½‚Á‚Ä‚ÍA•K‚¸‚±‚ÌƒRƒƒ“ƒg‚à
-//_/ ˆê‚Éˆø—p‚·‚é–‚Æ‚µ‚Ü‚·B
-//_/ (*2)‘¼ƒTƒCƒgã‚Å–{ƒ}ƒNƒ‚ğ’¼Úˆø—p‚·‚é–‚ÍA‚²‰“—¶Šè‚¢‚Ü‚·B
-//_/ y http://www.h3.dion.ne.jp/~sakatsu/holiday_logic.htm z
-//_/ ‚Ö‚ÌƒŠƒ“ƒN‚É‚æ‚éĞ‰î‚Å‘Î‰‚µ‚Ä‰º‚³‚¢B
-//_/ (*3)[ktHolidayName]‚Æ‚¢‚¤ŠÖ”–¼‚»‚Ì‚à‚Ì‚ÍAŠe©‚ÌŠÂ‹«‚É
-//_/ ‚¨‚¯‚é–½–¼‹K‘¥‚É‰ˆ‚Á‚Ä•ÏX‚µ‚Ä‚à\‚¢‚Ü‚¹‚ñB
+//_/ (*1)ã“ã®ã‚³ãƒ¼ãƒ‰ã‚’å¼•ç”¨ã™ã‚‹ã«å½“ãŸã£ã¦ã¯ã€å¿…ãšã“ã®ã‚³ãƒ¡ãƒ³ãƒˆã‚‚
+//_/ ä¸€ç·’ã«å¼•ç”¨ã™ã‚‹äº‹ã¨ã—ã¾ã™ã€‚
+//_/ (*2)ä»–ã‚µã‚¤ãƒˆä¸Šã§æœ¬ãƒã‚¯ãƒ­ã‚’ç›´æ¥å¼•ç”¨ã™ã‚‹äº‹ã¯ã€ã”é æ…®é¡˜ã„ã¾ã™ã€‚
+//_/ ã€ http://www.h3.dion.ne.jp/~sakatsu/holiday_logic.htm ã€‘
+//_/ ã¸ã®ãƒªãƒ³ã‚¯ã«ã‚ˆã‚‹ç´¹ä»‹ã§å¯¾å¿œã—ã¦ä¸‹ã•ã„ã€‚
+//_/ (*3)[ktHolidayName]ã¨ã„ã†é–¢æ•°åãã®ã‚‚ã®ã¯ã€å„è‡ªã®ç’°å¢ƒã«
+//_/ ãŠã‘ã‚‹å‘½åè¦å‰‡ã«æ²¿ã£ã¦å¤‰æ›´ã—ã¦ã‚‚æ§‹ã„ã¾ã›ã‚“ã€‚
 //_/ 
 //_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
-// 2008/10/29 •Ï”‚Ìvarw’è‚ª–³‚­ALˆæ•Ï”ˆµ‚¢‚É‚È‚Á‚Ä‚¢‚½‚Ì‚ğC³‚µ‚Ü‚µ‚½B
+// 2008/10/29 å¤‰æ•°ã®varæŒ‡å®šãŒç„¡ãã€åºƒåŸŸå¤‰æ•°æ‰±ã„ã«ãªã£ã¦ã„ãŸã®ã‚’ä¿®æ­£ã—ã¾ã—ãŸã€‚
 
 var MONDAY = 1;
 var TUESDAY = 2;
 var WEDNESDAY = 3;
 
-// JavaScript‚Åˆµ‚¦‚é“ú•t‚Í1970/1/1`‚Ì‚İ
-//var cstImplementTheLawOfHoliday = new Date("1948/7/20");  // j“ú–@{s
-//var cstAkihitoKekkon = new Date("1959/4/10");              // –¾me‰¤‚ÌŒ‹¥‚Ì‹V
-var cstShowaTaiso = new Date("1989/2/24");                // º˜a“Vc‘å‘r‚Ì—ç
-var cstNorihitoKekkon = new Date("1993/6/9");            // “¿me‰¤‚ÌŒ‹¥‚Ì‹V
-var cstSokuireiseiden = new Date("1990/11/12");          // ‘¦ˆÊ—ç³“a‚Ì‹V
-var cstImplementHoliday = new Date("1973/4/12");        // U‘Ö‹x“ú{s
+// JavaScriptã§æ‰±ãˆã‚‹æ—¥ä»˜ã¯1970/1/1ã€œã®ã¿
+//var cstImplementTheLawOfHoliday = new Date("1948/7/20");  // ç¥æ—¥æ³•æ–½è¡Œ
+//var cstAkihitoKekkon = new Date("1959/4/10");              // æ˜ä»è¦ªç‹ã®çµå©šã®å„€
+var cstShowaTaiso = new Date("1989/2/24");                // æ˜­å’Œå¤©çš‡å¤§å–ªã®ç¤¼
+var cstNorihitoKekkon = new Date("1993/6/9");            // å¾³ä»è¦ªç‹ã®çµå©šã®å„€
+var cstSokuireiseiden = new Date("1990/11/12");          // å³ä½ç¤¼æ­£æ®¿ã®å„€
+var cstImplementHoliday = new Date("1973/4/12");        // æŒ¯æ›¿ä¼‘æ—¥æ–½è¡Œ
 
-// [prmDate]‚É‚Í "yyyy/m/d"Œ`®‚Ì“ú•t•¶š—ñ‚ğ“n‚·
+// [prmDate]ã«ã¯ "yyyy/m/d"å½¢å¼ã®æ—¥ä»˜æ–‡å­—åˆ—ã‚’æ¸¡ã™
 function ktHolidayName(prmDate)
 {
   var MyDate = new Date(prmDate);
@@ -42,15 +42,15 @@ function ktHolidayName(prmDate)
 
   if (HolidayName == "") {
       if (MyDate.getDay() == MONDAY) {
-          // Œ—jˆÈŠO‚ÍU‘Ö‹x“ú”»’è•s—v
-          // 5/6(‰Î,…)‚Ì”»’è‚ÍprvHolidayChk‚Åˆ—Ï
-          // 5/6(Œ)‚Í‚±‚±‚Å”»’è‚·‚é
+          // æœˆæ›œä»¥å¤–ã¯æŒ¯æ›¿ä¼‘æ—¥åˆ¤å®šä¸è¦
+          // 5/6(ç«,æ°´)ã®åˆ¤å®šã¯prvHolidayChkã§å‡¦ç†æ¸ˆ
+          // 5/6(æœˆ)ã¯ã“ã“ã§åˆ¤å®šã™ã‚‹
           if (MyDate.getTime() >= cstImplementHoliday.getTime()) {
               YesterDay = new Date(MyDate.getFullYear(),
                                      MyDate.getMonth(),(MyDate.getDate()-1));
               HolidayName = prvHolidayChk(YesterDay);
               if (HolidayName != "") {
-                  HolidayName_ret = "U‘Ö‹x“ú";
+                  HolidayName_ret = "æŒ¯æ›¿ä¼‘æ—¥";
               } else {
                   HolidayName_ret = "";
               }
@@ -72,184 +72,184 @@ function ktHolidayName(prmDate)
 function prvHolidayChk(MyDate)
 {
   var MyYear = MyDate.getFullYear();
-  var MyMonth = MyDate.getMonth() + 1;    // MyMonth:1`12
+  var MyMonth = MyDate.getMonth() + 1;    // MyMonth:1ã€œ12
   var MyDay = MyDate.getDate();
   var Result = "";
   var NumberOfWeek;
   var MyAutumnEquinox;
 
-// JavaScript‚Åˆµ‚¦‚é“ú•t‚Í1970/1/1`‚Ì‚İ‚Åj“ú–@{sŒã‚È‚Ì‚Å‰º‹L‚Í•s—v
+// JavaScriptã§æ‰±ãˆã‚‹æ—¥ä»˜ã¯1970/1/1ã€œã®ã¿ã§ç¥æ—¥æ³•æ–½è¡Œå¾Œãªã®ã§ä¸‹è¨˜ã¯ä¸è¦
 // if (MyDate.getTime() < cstImplementTheLawOfHoliday.getTime()) {
-// @@return ""; // j“ú–@{s(1948/7/20)ˆÈ‘O
+// ã€€ã€€return ""; // ç¥æ—¥æ³•æ–½è¡Œ(1948/7/20)ä»¥å‰
 // } else;
 
   switch (MyMonth) {
-// ‚PŒ //
+// ï¼‘æœˆ //
   case 1:
       if (MyDay == 1) {
-          Result = "Œ³“ú";
+          Result = "å…ƒæ—¥";
       } else {
           if (MyYear >= 2000) {
               NumberOfWeek = Math.floor((MyDay - 1) / 7) + 1;
               if ((NumberOfWeek == 2) && (MyDate.getDay() == MONDAY)) {
-                  Result = "¬l‚Ì“ú";
+                  Result = "æˆäººã®æ—¥";
               } else;
           } else {
               if (MyDay == 15) {
-                  Result = "¬l‚Ì“ú";
+                  Result = "æˆäººã®æ—¥";
               } else;
           }
       }
       break;
-// ‚QŒ //
+// ï¼’æœˆ //
   case 2:
       if (MyDay == 11) {
           if (MyYear >= 1967) {
-              Result = "Œš‘‹L”O‚Ì“ú";
+              Result = "å»ºå›½è¨˜å¿µã®æ—¥";
           } else;
       } else {
           if (MyDate.getTime() == cstShowaTaiso.getTime()) {
-              Result = "º˜a“Vc‚Ì‘å‘r‚Ì—ç";
+              Result = "æ˜­å’Œå¤©çš‡ã®å¤§å–ªã®ç¤¼";
           } else;
       }
       break;
-// ‚RŒ //
+// ï¼“æœˆ //
   case 3:
-      if (MyDay == prvDayOfSpringEquinox(MyYear)) {  // 1948`2150ˆÈŠO‚Í[99]
-          Result = "t•ª‚Ì“ú";                       // ‚ª•Ô‚é‚Ì‚Å¤•K‚¸‚‚É‚È‚é
+      if (MyDay == prvDayOfSpringEquinox(MyYear)) {  // 1948ã€œ2150ä»¥å¤–ã¯[99]
+          Result = "æ˜¥åˆ†ã®æ—¥";                       // ãŒè¿”ã‚‹ã®ã§ï½¤å¿…ãšâ‰ ã«ãªã‚‹
       } else;
       break;
-// ‚SŒ //
+// ï¼”æœˆ //
   case 4:
       if (MyDay == 29) {
           if (MyYear >= 2007) {
-              Result = "º˜a‚Ì“ú";
+              Result = "æ˜­å’Œã®æ—¥";
           } else {
               if (MyYear >= 1989) {
-                  Result = "‚İ‚Ç‚è‚Ì“ú";
+                  Result = "ã¿ã©ã‚Šã®æ—¥";
               } else {
-                Result = "“Vc’a¶“ú";
+                Result = "å¤©çš‡èª•ç”Ÿæ—¥";
               }
           }
       } else {
-          // JavaScript‚Åˆµ‚¦‚é“ú•t‚Í1970/1/1`‚Ì‚İ‚È‚Ì‚Å‰º‹L‚Í•s—v
+          // JavaScriptã§æ‰±ãˆã‚‹æ—¥ä»˜ã¯1970/1/1ã€œã®ã¿ãªã®ã§ä¸‹è¨˜ã¯ä¸è¦
           // if (MyDate.getTime() == cstAkihitoKekkon.getTime()) {
-          // @@Result = "c‘¾q–¾me‰¤‚ÌŒ‹¥‚Ì‹V";@@// (=1959/4/10)
+          // ã€€ã€€Result = "çš‡å¤ªå­æ˜ä»è¦ªç‹ã®çµå©šã®å„€";ã€€ã€€// (=1959/4/10)
           // } else;
       }
       break;
-// ‚TŒ //
+// ï¼•æœˆ //
   case 5:
       switch ( MyDay ) {
-        case 3:  // ‚TŒ‚R“ú
-          Result = "Œ›–@‹L”O“ú";
+        case 3:  // ï¼•æœˆï¼“æ—¥
+          Result = "æ†²æ³•è¨˜å¿µæ—¥";
           break;
-        case 4:  // ‚TŒ‚S“ú
+        case 4:  // ï¼•æœˆï¼”æ—¥
           if (MyYear >= 2007) {
-              Result = "‚İ‚Ç‚è‚Ì“ú";
+              Result = "ã¿ã©ã‚Šã®æ—¥";
           } else {
               if (MyYear >= 1986) {
                   if (MyDate.getDay() > MONDAY) {
-                  // 5/4‚ª“ú—j“ú‚Íw‘ü‚Ì“ú—jx¤Œ—j“ú‚ÍwŒ›–@‹L”O“ú‚ÌU‘Ö‹x“úx(`2006”N)
-                      Result = "‘–¯‚Ì‹x“ú";
+                  // 5/4ãŒæ—¥æ›œæ—¥ã¯ã€åªã®æ—¥æ›œã€ï½¤æœˆæ›œæ—¥ã¯ã€æ†²æ³•è¨˜å¿µæ—¥ã®æŒ¯æ›¿ä¼‘æ—¥ã€(ã€œ2006å¹´)
+                      Result = "å›½æ°‘ã®ä¼‘æ—¥";
                   } else;
               } else;
           }
           break;
-        case 5:  // ‚TŒ‚T“ú
-          Result = "‚±‚Ç‚à‚Ì“ú";
+        case 5:  // ï¼•æœˆï¼•æ—¥
+          Result = "ã“ã©ã‚‚ã®æ—¥";
           break;
-        case 6:  // ‚TŒ‚U“ú
+        case 6:  // ï¼•æœˆï¼–æ—¥
           if (MyYear >= 2007) {
               if ((MyDate.getDay() == TUESDAY) || (MyDate.getDay() == WEDNESDAY)) {
-                  Result = "U‘Ö‹x“ú";    // [5/3,5/4‚ª“ú—j]ƒP[ƒX‚Ì‚İA‚±‚±‚Å”»’è
+                  Result = "æŒ¯æ›¿ä¼‘æ—¥";    // [5/3,5/4ãŒæ—¥æ›œ]ã‚±ãƒ¼ã‚¹ã®ã¿ã€ã“ã“ã§åˆ¤å®š
               } else;
           } else;
           break;
       }
       break;
-// ‚UŒ //
+// ï¼–æœˆ //
   case 6:
       if (MyDate.getTime() == cstNorihitoKekkon.getTime()) {
-          Result = "c‘¾q“¿me‰¤‚ÌŒ‹¥‚Ì‹V";
+          Result = "çš‡å¤ªå­å¾³ä»è¦ªç‹ã®çµå©šã®å„€";
       } else;
       break;
-// ‚VŒ //
+// ï¼—æœˆ //
   case 7:
       if (MyYear >= 2003) {
           NumberOfWeek = Math.floor((MyDay - 1) / 7) + 1;
           if ((NumberOfWeek == 3) && (MyDate.getDay() == MONDAY)) {
-              Result = "ŠC‚Ì“ú";
+              Result = "æµ·ã®æ—¥";
           } else;
       } else {
           if (MyYear >= 1996) {
               if (MyDay == 20) {
-                  Result = "ŠC‚Ì“ú";
+                  Result = "æµ·ã®æ—¥";
               } else;
           } else;
       }
       break;
-// ‚XŒ //
+// ï¼™æœˆ //
   case 9:
-      //‘æ‚RŒ—j“ú(15`21)‚ÆH•ª“ú(22`24)‚ªd‚È‚é–‚Í‚È‚¢
+      //ç¬¬ï¼“æœˆæ›œæ—¥(15ã€œ21)ã¨ç§‹åˆ†æ—¥(22ã€œ24)ãŒé‡ãªã‚‹äº‹ã¯ãªã„
       MyAutumnEquinox = prvDayOfAutumnEquinox(MyYear);
-      if (MyDay == MyAutumnEquinox) {    // 1948`2150ˆÈŠO‚Í[99]
-          Result = "H•ª‚Ì“ú";           // ‚ª•Ô‚é‚Ì‚Å¤•K‚¸‚‚É‚È‚é
+      if (MyDay == MyAutumnEquinox) {    // 1948ã€œ2150ä»¥å¤–ã¯[99]
+          Result = "ç§‹åˆ†ã®æ—¥";           // ãŒè¿”ã‚‹ã®ã§ï½¤å¿…ãšâ‰ ã«ãªã‚‹
       } else {
           if (MyYear >= 2003) {
               NumberOfWeek = Math.floor((MyDay - 1) / 7) + 1;
               if ((NumberOfWeek == 3) && (MyDate.getDay() == MONDAY)) {
-                  Result = "Œh˜V‚Ì“ú";
+                  Result = "æ•¬è€ã®æ—¥";
               } else {
                   if (MyDate.getDay() == TUESDAY) {
                       if (MyDay == (MyAutumnEquinox - 1)) {
-                          Result = "‘–¯‚Ì‹x“ú";
+                          Result = "å›½æ°‘ã®ä¼‘æ—¥";
                       } else;
                   } else;
               }
           } else {
               if (MyYear >= 1966) {
                   if (MyDay == 15) {
-                      Result = "Œh˜V‚Ì“ú";
+                      Result = "æ•¬è€ã®æ—¥";
                   } else;
               } else;
           }
       }
       break;
-// ‚P‚OŒ //
+// ï¼‘ï¼æœˆ //
   case 10:
       if (MyYear >= 2000) {
           NumberOfWeek = Math.floor(( MyDay - 1) / 7) + 1;
           if ((NumberOfWeek == 2) && (MyDate.getDay() == MONDAY)) {
-              Result = "‘Ìˆç‚Ì“ú";
+              Result = "ä½“è‚²ã®æ—¥";
           } else;
       } else {
           if (MyYear >= 1966) {
               if (MyDay == 10) {
-                  Result = "‘Ìˆç‚Ì“ú";
+                  Result = "ä½“è‚²ã®æ—¥";
               } else;
           } else;
       }
       break;
-// ‚P‚PŒ //
+// ï¼‘ï¼‘æœˆ //
   case 11:
       if (MyDay == 3) {
-          Result = "•¶‰»‚Ì“ú";
+          Result = "æ–‡åŒ–ã®æ—¥";
       } else {
           if (MyDay == 23) {
-              Result = "‹Î˜JŠ´Ó‚Ì“ú";
+              Result = "å‹¤åŠ´æ„Ÿè¬ã®æ—¥";
           } else {
               if (MyDate.getTime() == cstSokuireiseiden.getTime()) {
-                  Result = "‘¦ˆÊ—ç³“a‚Ì‹V";
+                  Result = "å³ä½ç¤¼æ­£æ®¿ã®å„€";
               } else;
           }
       }
       break;
-// ‚P‚QŒ //
+// ï¼‘ï¼’æœˆ //
   case 12:
       if (MyDay == 23) {
           if (MyYear >= 1989) {
-              Result = "“Vc’a¶“ú";
+              Result = "å¤©çš‡èª•ç”Ÿæ—¥";
           } else;
       } else;
       break;
@@ -259,18 +259,18 @@ function prvHolidayChk(MyDate)
 }
 
 //===================================================================
-// t•ª/H•ª“ú‚Ì—ªZ®‚Í
-// wŠCã•ÛˆÀ’¡…˜H•” —ïŒvZŒ¤‹†‰ï•Ò V‚±‚æ‚İ•Ö—˜’ x
-// ‚ÅĞ‰î‚³‚ê‚Ä‚¢‚é®‚Å‚·B
+// æ˜¥åˆ†/ç§‹åˆ†æ—¥ã®ç•¥ç®—å¼ã¯
+// ã€æµ·ä¸Šä¿å®‰åºæ°´è·¯éƒ¨ æš¦è¨ˆç®—ç ”ç©¶ä¼šç·¨ æ–°ã“ã‚ˆã¿ä¾¿åˆ©å¸³ã€
+// ã§ç´¹ä»‹ã•ã‚Œã¦ã„ã‚‹å¼ã§ã™ã€‚
 function prvDayOfSpringEquinox(MyYear)
 {
   var SpringEquinox_ret;
 
   if (MyYear <= 1947) {
-      SpringEquinox_ret = 99;    //j“ú–@{s‘O
+      SpringEquinox_ret = 99;    //ç¥æ—¥æ³•æ–½è¡Œå‰
   } else {
       if (MyYear <= 1979) {
-          // Math.floor ŠÖ”‚Í[VBA‚ÌIntŠÖ”]‚É‘Š“–
+          // Math.floor é–¢æ•°ã¯[VBAã®Inté–¢æ•°]ã«ç›¸å½“
           SpringEquinox_ret = Math.floor(20.8357 + 
             (0.242194 * (MyYear - 1980)) - Math.floor((MyYear - 1980) / 4));
       } else {
@@ -282,7 +282,7 @@ function prvDayOfSpringEquinox(MyYear)
                   SpringEquinox_ret = Math.floor(21.851 + 
                     (0.242194 * (MyYear - 1980)) - Math.floor((MyYear - 1980) / 4));
               } else {
-                  SpringEquinox_ret = 99;    //2151”NˆÈ~‚Í—ªZ®‚ª–³‚¢‚Ì‚Å•s–¾
+                  SpringEquinox_ret = 99;    //2151å¹´ä»¥é™ã¯ç•¥ç®—å¼ãŒç„¡ã„ã®ã§ä¸æ˜
               }
           }
       }
@@ -296,10 +296,10 @@ function prvDayOfAutumnEquinox(MyYear)
   var AutumnEquinox_ret;
 
   if (MyYear <= 1947) {
-      AutumnEquinox_ret = 99; //j“ú–@{s‘O
+      AutumnEquinox_ret = 99; //ç¥æ—¥æ³•æ–½è¡Œå‰
   } else {
       if (MyYear <= 1979) {
-          // Math.floor ŠÖ”‚Í[VBA‚ÌIntŠÖ”]‚É‘Š“–
+          // Math.floor é–¢æ•°ã¯[VBAã®Inté–¢æ•°]ã«ç›¸å½“
           AutumnEquinox_ret = Math.floor(23.2588 + 
             (0.242194 * (MyYear - 1980)) - Math.floor((MyYear - 1980) / 4));
       } else {
@@ -311,7 +311,7 @@ function prvDayOfAutumnEquinox(MyYear)
                   AutumnEquinox_ret = Math.floor(24.2488 + 
                     (0.242194 * (MyYear - 1980)) - Math.floor((MyYear - 1980) / 4));
               } else {
-                  AutumnEquinox_ret = 99;    //2151”NˆÈ~‚Í—ªZ®‚ª–³‚¢‚Ì‚Å•s–¾
+                  AutumnEquinox_ret = 99;    //2151å¹´ä»¥é™ã¯ç•¥ç®—å¼ãŒç„¡ã„ã®ã§ä¸æ˜
               }
           }
       }
