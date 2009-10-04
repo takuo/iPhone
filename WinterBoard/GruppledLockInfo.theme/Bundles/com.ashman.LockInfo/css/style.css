@@ -94,6 +94,14 @@ color:rgba(200, 200, 200, 0.65);
 .sat {
  color: Blue;
 }
+.sun-today {
+background-color:rgba(120, 120, 120, 0.6);
+ color: Red;
+}
+.sat-today {
+background-color:rgba(120, 120, 120, 0.6);
+ color: Blue;
+}
 .otherSun {
 color:rgba(255, 0, 0, 0.65);
 }

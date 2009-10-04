@@ -259,12 +259,20 @@ function updateClock(){
 				if ( (cell.className == "otherMonth") &&
 				     (current.getDay() == 0 || holy != "") )
 					cell.className = "otherSun";
-                                else if(current.getDay() == 0 || holy != "")
-					cell.className = "sun";
+				else if(current.getDay() == 0 || holy != "") {
+						if (cell.className == "today")
+								cell.className = "sun-today";
+						else
+								cell.className = "sun";
+				}
 				else if(current.getDay() == 6 && cell.className == "otherMonth")
 					cell.className = "otherSat";
-				else if(current.getDay() == 6)
-					cell.className = "sat";
+				else if(current.getDay() == 6) {
+						if (cell.className == "today")
+								cell.className = "sat-today";
+						else
+								cell.className = "sat";
+				}
 				cell.innerHTML = date;
 				current.setDate(date + 1);
 				row.appendChild(cell);
