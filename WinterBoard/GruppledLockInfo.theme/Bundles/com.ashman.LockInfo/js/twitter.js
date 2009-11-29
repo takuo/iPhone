@@ -1,3 +1,9 @@
+// twitter.js - Twitter timeline for Gruppled LockInfo
+//
+// Author: Takuo Kitame <kitame at gmail.com> 
+// Copyright 2009 Takuo Kitame.
+// http://github.com/takuo/
+//
 var twitterTimestamp;
 
 function updateTwitter(){
@@ -120,7 +126,7 @@ function twitterRefresherTemp(){
 	document.getElementById("twitter_timestamp").innerHTML = "...";
 	
 	fetchTwitter("http://twitter.com/statuses/mentions.json?count="+twitter_ment_nb, twMentionsDIV, 0);
-	fetchTwitter("http://twitter.com/statuses/friends_timeline.json?count="+twitter_tl_nb, twFriendDIV, 0);
+	fetchTwitter("http://twitter.com/statuses/home_timeline.json?count="+twitter_tl_nb, twFriendDIV, 0);
 	fetchTwitter("http://twitter.com/direct_messages.json?count="+twitter_dm_nb, twDirectDIV, 0);
 
 	twitterTimestamp = new Date();
