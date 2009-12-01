@@ -83,12 +83,18 @@ function updateTwitterDIV(div, twit)
 
 		for(var i=0; i<twit.length && i < div.limit; i++) {
 			var date = new Date(twit[i].created_at);
-			var screen_name = twit[i]['sender_screen_name'] ?  twit[i]['sender_screen_name'] : twit[i].user.screen_name;
+                        var tw = twit[i];
+			var screen_name = tw['sender_screen_name'] ? tw['sender_screen_name'] : tw.user.screen_name;
+                        if (twit[i]['retweeted_status']) {
+                          tw = twit[i]['retweeted_status'];
+                          tw.text = "<span class='retweet'>&crarr;" + screen_name + "</span><br />" + tw.text;
+                          screen_name = tw.user.screen_name;
+                        }
 			html += "<div  class='sub"+ (i % 2 ? " alt" : "") + "'>";
-			html += "<span class='sub1 tweet'>" + twit[i].text +"</span>";
+			html += "<span class='sub1 tweet'>" + tw.text +"</span>";
 			html += "<div style='text-align:right;' class='sub2 twinfo'><span class='sub2 who'>" + screen_name +" &ndash; "  + date.format(date.isSameDay() ? format_time : format_date_time_short) + "</span>";
 			if(displayRelativeTimes){
-				var key = div.id + "_time_" + twit[i].id;
+				var key = div.id + "_time_" + tw.id;
 				html += " (<span id='" + key +"'> </span>)";
 				relativeTimes.push([key, date]);
 			}
